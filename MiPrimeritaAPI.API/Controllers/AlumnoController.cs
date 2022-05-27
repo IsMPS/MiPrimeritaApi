@@ -58,11 +58,5 @@ namespace MiPrimeritaAPI.API.Controllers
             return Ok();            
         }
 
-        [HttpPost]
-        [Route("Login")]
-        public ActionResult Login(LoginDTO loginDTO)
-        {
-            return Ok();
-        }
     }
 }

@@ -17,6 +17,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IAlumnoBL, AlumnoBL>();
 builder.Services.AddScoped<IAlumnoDAL, AlumnoDAL>();
+builder.Services.AddScoped<IUserBL, UserBL>();
+builder.Services.AddScoped<IUserDAL, UserDAL>();
 
 builder.Services.AddAutoMapper(cfg => cfg.AddProfile(new AutomapperProfile()));
 

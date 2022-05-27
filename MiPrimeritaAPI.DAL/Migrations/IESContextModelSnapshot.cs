@@ -37,6 +37,29 @@ namespace MiPrimeritaAPI.DAL.Migrations
 
                     b.ToTable("Alumnos");
                 });
+
+            modelBuilder.Entity("MiPrimeritaAPI.DAL.Tables.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FechaNacimiento")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("User");
+                });
 #pragma warning restore 612, 618
         }
     }

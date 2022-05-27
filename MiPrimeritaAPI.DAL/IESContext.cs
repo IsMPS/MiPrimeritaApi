@@ -12,9 +12,10 @@ namespace MiPrimeritaAPI.DAL
     public class IESContext : DbContext
     {
         public DbSet<Alumno> Alumnos { get; set; }
+        public DbSet<User> User { get; set; }
         protected readonly IConfiguration Configuration;
 
-        public IESContext() {}
+        public IESContext() { }
 
         public IESContext(IConfiguration configuration)
         {
@@ -25,8 +26,8 @@ namespace MiPrimeritaAPI.DAL
         {
             // connect to mysql with connection string from app settings
             //var connectionString = Configuration.GetConnectionString("ConexionAPidgey");
-            options.UseMySql("server=localhost;port=3306;database=ies;user=pidgey;password=P@ssw0rd;", 
-                ServerVersion.AutoDetect("server=localhost;port=3306;database=ies;user=pidgey;password=P@ssw0rd;"));
+            options.UseMySql("server=localhost; port=3306; database=ies; user=IsaMP; password=UnPatitoEnElAgua;", 
+                ServerVersion.AutoDetect("server=localhost; port=3306; database=ies; user=IsaMP; password=UnPatitoEnElAgua;"));
         }
     }
 }

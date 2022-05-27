@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MiPrimeritaAPI.DAL.Migrations
 {
     [DbContext(typeof(IESContext))]
-    [Migration("20220509111322_InitialCreate")]
+    [Migration("20220526163855_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,29 @@ namespace MiPrimeritaAPI.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Alumnos");
+                });
+
+            modelBuilder.Entity("MiPrimeritaAPI.DAL.Tables.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FechaNacimiento")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("User");
                 });
 #pragma warning restore 612, 618
         }
